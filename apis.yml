@@ -1,8 +1,25 @@
 aid: airkit
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airkit.png
 name: AirKit
-description: 'AirKit is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: automation. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'AirKit (Airkit.ai) was a low-code platform for building customer-facing digital
+  experiences and, later, AI-powered customer service agents, backed by Accel and Emergence Capital.
+  The company was acquired by Salesforce (announced 2023) and its technology now underpins Salesforce
+  Agentforce. As of this enrichment pass, www.airkit.com 301-redirects to salesforce.com/agentforce
+  and the domain''s CAA records point to salesforce.com, so AirKit no longer operates an independent
+  developer surface, API, documentation, or portal of its own — all first-party discovery URLs resolve
+  into Salesforce properties. This profile is retained as an acquired-company record; enrichment beyond
+  domain-level DNS/TLS evidence is not applicable.'
 url: https://raw.githubusercontent.com/api-evangelist/airkit/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -16,6 +33,14 @@ modified: '2026-07-17'
 tags:
 - Company
 - Automation
+- Low-Code
+- Customer Experience
+- Conversational AI
+- Acquired
+- Salesforce
+x-status: acquired
+x-acquired-by: salesforce
+x-acquired-evidence: www.airkit.com 301 -> salesforce.com/agentforce; airkit.com CAA -> salesforce.com
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +48,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/airkit-domain-security.yml
 - type: Website
   url: http://www.airkit.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
